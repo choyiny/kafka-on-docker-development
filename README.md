@@ -1,0 +1,2 @@
+# Kafka on Docker for development
+This is a companion repo for my braindump article [here](https://choy.in). It's a simple way to get a Kafka cluster up and running for development purposes. It's not intended for production use.
