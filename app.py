@@ -13,6 +13,6 @@ producer = KafkaProducer(
 @app.route('/posts', methods=['POST'])
 def create_post():
     post = request.get_json()  # {'author': 'choyiny', 'content': 'Kafka is cool!'}
-    post['created_at'] = datetime.now().isoformat()
+    post['created_at'] = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
     producer.send('posts', post)
     return 'ok'
